@@ -1,0 +1,19 @@
+.content {
+    list-style: none;
+    padding-left: 0;
+    width: 500px;
+}
+.liStyle {
+    font-size: 1.2rem;
+    color: #ff5a4d;
+    font-weight: 100;
+    font-family: "Calibri Light", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ff5a4d;
+    margin-top: 5px;
+    padding: 15px 30px;
+}
+.liStyle p{
+    margin: 0;
+}
