@@ -13,5 +13,11 @@ export const product = [
         year: '2019',
         price: 300,
     },
+    {
+        brandName: 'Sony',
+        model: 'Z one',
+        year: '2019',
+        price: 700,
+    },
 ];
 

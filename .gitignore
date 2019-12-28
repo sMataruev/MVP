@@ -2,3 +2,4 @@ node_modules
 backend-webpack.iml
 .idea
 yarn.lock
+public

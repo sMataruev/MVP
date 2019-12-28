@@ -2,7 +2,7 @@
 
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
-const webpack = require( 'webpack' );
+// const webpack = require( 'webpack' );
 
 
 const path = require( 'path' );
@@ -21,7 +21,8 @@ module.exports = {
     devtool: "source-map",
 
     devServer: {
-        hot: true,
+        // hot: true,
+        liveReload: true
     },
 
     plugins: [
@@ -31,9 +32,14 @@ module.exports = {
             ignoreOrder: false
         } ),
         new HtmlWebpackPlugin( {
-            title: "BackEnd",
-            template: `${ path.resolve( __dirname ) }/src/index.html`,
-            filename: "index.html"
+            template: `${ path.resolve( __dirname ) }/src/main.pug`,
+            filename: "index.html",
+            inject: false
+        } ),
+        new HtmlWebpackPlugin( {
+            template: `${ path.resolve( __dirname ) }/src/product.pug`,
+            filename: "product.html",
+            inject: false
         } ),
     ],
     module: {
@@ -44,6 +50,10 @@ module.exports = {
                     loader: 'babel-loader',
                 },
                 exclude: '/node_modules/'
+            },
+            {
+                test: /\.pug$/i,
+                use: [ 'html-loader', 'pug-html-loader?pretty']
             },
             {
                 test: /\.css$/i,

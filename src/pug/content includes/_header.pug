@@ -1,0 +1,13 @@
+block config
+	include ../config/config
+header
+	nav
+		ul(class="mt-2")
+			li: a(href="#")
+				if isLang
+					| #{home}
+				else
+					| home
+			li: a(href="#") #{product}
+			li: a(href="#") #{about}
+			li: a(href="#") Register

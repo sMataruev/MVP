@@ -14,6 +14,5 @@ export default class Presenter {
     getPhone( phones ) {
         phones.forEach( phone => this.view.getIphone(phone));
     }
-    
-    
+
 }
