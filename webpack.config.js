@@ -34,12 +34,12 @@ module.exports = {
         new HtmlWebpackPlugin( {
             template: `${ path.resolve( __dirname ) }/src/main.pug`,
             filename: "index.html",
-            inject: false
+            inject: true
         } ),
         new HtmlWebpackPlugin( {
             template: `${ path.resolve( __dirname ) }/src/product.pug`,
             filename: "product.html",
-            inject: false
+            inject: true
         } ),
     ],
     module: {
@@ -56,11 +56,11 @@ module.exports = {
                 use: [ 'html-loader', 'pug-html-loader?pretty']
             },
             {
-                test: /\.css$/i,
+                test: /\.s[ac]ss$/i,
                 use: [
-                    // MiniCssExtractPlugin.loader,
-                    'style-loader',
-                    'css-loader'
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
                 ],
                 exclude: '/node_modules/'
             },

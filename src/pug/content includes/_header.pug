@@ -2,12 +2,12 @@ block config
 	include ../config/config
 header
 	nav
-		ul(class="mt-2")
-			li: a(href="#")
+		ul(class="mt-5 d-flex justify-content-around myUl")
+			li(class='mx-5'): a(href="#")
 				if isLang
 					| #{home}
 				else
 					| home
-			li: a(href="#") #{product}
-			li: a(href="#") #{about}
-			li: a(href="#") Register
+			li(class='mx-5'): a(href="#") #{product}
+			li(class='mx-5'): a(href="#") #{about}
+			li(class='mx-5'): a(href="#") Register

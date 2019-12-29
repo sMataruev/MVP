@@ -1,4 +1,5 @@
 "use strict";
+
 // import Model from "./MVP/Model";
 // import View from "./MVP/View";
 // import Presenter from "./MVP/Presenter";
@@ -8,3 +9,7 @@
 // const view = new View( presenter );
 // presenter.init( view, model );
 
+
+import Menu from "./menu";
+
+new Menu();

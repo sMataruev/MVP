@@ -1,0 +1,14 @@
+@import "config";
+.myUl {
+  list-style: none;
+  background-color: aqua;
+  height: 100px;
+
+  li {
+    color: $menuLink;
+    font-size: $fonrSizee;
+    font-weight: bold;
+  }
+}
+
+
